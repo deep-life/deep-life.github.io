@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+	<title>Karina Zadorozhny | Personal Website</title>
+</head>
+
+
+<body>
+	<section id = 'navbar' class = 'container'>
+		<div class="topnav">
+			  <a href="./index.html"> Home</a>
+			  <a class="active" href="./about.html"> About me </a>
+			  <a href="./research.html">Projects</a>
+			  <a href="./publications.html">Publications</a>
+			  <a href="./connect.html">Connect</a>
+		</div>
+	</section>
+
+	<section id ="about">
+		<div class="about-me">
+				<div class="about-image">
+				        <img src="./images/image1.jpg" alt="Profile Photo" width = 75%>
+     			 </div>
+
+				<h1 class = 'about-me-heading'>About me </h1>
+
+				
+
+				 <p class="about-me-text">Hello, My name is Karina. I'm pursuing a Bachelor's degree in Mathematics and a Master's degree in Computer Science at Northwestern University. I'm passionate about the applications of deep learning in the biomedical field and I believe that the vast amount of genomic data can be harnessed using the tools of artificial intelligence and general data analysis to groundbreaking progress in medicine.  
+
+				 </p>
+
+				 
+<!-- 				 <button class = 'about-button' type="submit" onclick="window.open('./resume.pdf')"> Resume</button>
+ -->
+ 				<button class = 'about-button'> <a href = '#resume'> Resume </a></button>
+
+				 <button class = 'about-button' type="submit" onclick="window.location.href ='./publications.html'"> Publications</button>
+
+
+				 <h class = 'about-subheader'> In news </h>
+
+				<iframe class ='about-news' width="100%" height="400"
+				src=https://www.em.muni.cz/en/science/10758-get-published-in-nature-first-then-graduate-from-high-school>
+				</iframe>
+
+<!-- 				<iframe class ='about-news' width="45%" height="400"
+				src=https://ec.europa.eu/jrc/en/euwomen4future/karina-zadorozhny>
+				</iframe> -->
+
+				
+
+
+				<h class = 'about-subheader'> Preview Resume </h>
+				<div id= 'resume'>
+					<object data="resume.pdf" type="application/pdf" width ='100%' height="750">
+	  				<p> Resume <a href="resume.pdf">Download pdf.</a></p>
+					</object>
+				</div>
+
+		</div>
+	</section>
+
+
+</body>
+
