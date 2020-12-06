@@ -36,12 +36,30 @@
         </div>
 
         <div class="training-gan">
-			<h1 class = 'training-gan-header' > GAN pretraining </h1>
+			<h1 class = 'training-gan-header' > GAN </h1>
+			<p class = "training-gan-info">
+				Generative Adversarial Network was pre-trained on over 20,000 real sequences. The hyperparameters were
+				chosen based on the training loss of the generator and the discriminator, the converging gradient penalty,
+				and the resemblence of the generated outputs to the real sequences.
+
+
 			<img  class="training-gan-header-image-loss"
 							  src="./images/GAN_loss2_web.png" alt="Feedback GAN" width = 70%>
 
+			<br>
+			In particular, notice the shift of the biochemical properties of the generated sequences as compared to
+			the real ones. These properties were analyzed using metrics the model has never, using a
+				<a style="color:lightpink"  href ="https://www.thermofisher.com/cz/en/home/life-science/protein-biology/peptides-proteins/custom-peptide-synthesis-services/peptide-analyzing-tool.html">
+				protein analysis
+				software.
+			</a>
+				seen but is still able
+				to match almost all parameters after 20 epochs.
+
+
 			 <img class="training-gan-header-image-biochem"
 							 src="./images/GAN_biochem_website.png" alt="Feedback GAN" width = 90%>
+			</p>
 		</div>
 
 		<div class="training-fb">
