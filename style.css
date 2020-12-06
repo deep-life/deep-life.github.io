@@ -77,8 +77,15 @@ background-size: 50%;
 	height: 100%
 }
 
+/*DATASET*/
+.iframe{
+	margin-left: 180px;
+}
 
-
+.description{
+	display: inline-block;
+	margin-left: 10%
+}
 /*APPROACH*/
 
 .container{
