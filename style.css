@@ -2,7 +2,7 @@
 html{
 	font-family: Didot, serif;
 	color: white;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 100;
 	line-height: 54px; 
 	margin-left: 15%;
@@ -97,20 +97,78 @@ background-size: 50%;
 	margin-left: 10%
 }
 
+.approach-intro-info{
+	color:darkgray;
+}
 
-/*EXPERIMENTS*/
+/*TRAINING*/
+
+.training-gan-header{
+	margin-top:5%
+}
+
+.training-gan-info{
+	color:darkgray;
+}
+
 
 .training-gan-header-image-loss{
-	margin-left:12%
+	margin-left:12%;
+	display:block;
 
 }
 
-.training-gan-header-image-biochem
+.training-gan-header-image-biochem{
+}
+
+
+
+
+/*EXPERIMENTS*/
+
+
+
 
 
 
 /*CONNECT*/
-.connect-authors-author{
-	font-size: 20px;
-	font-style: italic;
+
+.connect-connect{
 }
+
+.connect-authors-github-logo, .connect-authors-github{
+	margin-left:48%
+}
+
+.connect-connect-info{
+	margin-left:15%
+}
+
+.connect-authors-github{
+	margin-top:-3%
+}
+
+
+.connect-authors{
+	display:inline;
+}
+
+.connect-authors-header{
+	margin-top:5%
+}
+
+
+.connect-authors-right{
+	float:none;
+	margin-left: 60%;
+	display:inline-block;
+}
+
+.connect-authors-left{
+	margin-right: 60%;
+	float: left;
+	display: inline;
+	vertical-align:top;
+
+}
+
