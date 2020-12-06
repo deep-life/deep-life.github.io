@@ -1,6 +1,7 @@
 
 html{
-	font-family: Didot, serif; 
+	font-family: Didot, serif;
+	color: white;
 	font-size: 15px;
 	font-weight: 100;
 	line-height: 54px; 
@@ -8,6 +9,8 @@ html{
 	margin-right: 15%;
 	scroll-behavior: smooth;
 }
+
+
 
 /*HOME*/
 
@@ -76,183 +79,31 @@ background-size: 50%;
 
 
 
+/*APPROACH*/
 
-
-/*About page*/
-
-.about-all{
-	background-color: black;
+.container{
+	background-color:black;
 }
 
-#about {
-	margin-left: 1%;
-	margin-top: 5%;
-}
-
-.about-subheader{
-	display: block;
-	margin-top: 7%;
-	font-size: 20px;
-}
-
-.about-me{
-	float:none;
-}
-
-#about-me-text{
-	float:none;
-}
-
-.about-image
-{	
-	float: right;
-	display: inline;
-	margin-left: 3%;
-	margin-top: 7%;
-	margin-right: -10%;
-	height: auto;
-}
-
-.about-button{
-	margin-top: 5%;
-	font-size: 20px;
-	width: 175px;
-	height: 50px;
-	background-color: white;
-	font-family: Didot, serif; 
-	text-align: center;
-	box-shadow: 10px;
-	cursor: pointer;
-	filter: grayscale(90%);
-	text-decoration:none;
-}
-
-.about-button:hover{
-  background-color: black;
-  color: white;
-}
-
-#resume{
-}
-
-/*Publications
-*/
-
-#publications {
-	margin-left: 1%;
-	margin-top: 5%;
-}
-
-
-
-
-/*Research*/
-
-#research {
-	margin-left: 1%;
-	margin-top: 5%;
-	line-height: 2.5;
-	margin-bottom: 5%;
-}
-
-
-.res-text{
-	float: none;
-	line-height: 2;
-	margin-left: 1%;
-}
-
-.res-image{
+.approach-intro-image{
 	display: inline-block;
-	margin-top: 3% ;
-}
-.res-image-right{
-	float: right;
-	display: inline;
-	margin-left: 3%;
-	margin-right: 3%;
-	margin-top: 3%;
+	margin-left: 10%
 }
 
-.res-image-center{
-	float: center;
-	display: inline-block;
-	margin-top: 3%;
-	margin-right: 5%;
-	margin-left: 15%;
-}
 
-.res-image-left{
-	float: left;
-	display: inline;
-	margin-left: 3%;
-	margin-right: 3%;
-	margin-top: 5%;
-}
+/*EXPERIMENTS*/
 
-.res-sub-heading{
-	font-size: 17px;
-}
-.res-list{
+.training-gan-header-image-loss{
+	margin-left:12%
 
 }
 
-.res-project{
-	margin-bottom: 10%;
-}
+.training-gan-header-image-biochem
 
-.res-text-affil{
+
+
+/*CONNECT*/
+.connect-authors-author{
+	font-size: 20px;
 	font-style: italic;
-
 }
-
-
-.res-text-advisor{
-	
-}
-
-.res-list{
-}
-
-
- /*Publications*/
-#publications{
-
-}
-
-.publ-list{
-
-}
-
-.publ-item{
-	margin-bottom: 5%
-}
-
-
-
-/*Connect*/
-
-.connect-address{
-	line-height: 1.5;
-	float: none;
-}
-
-.connect-email{
-	line-height: 1.5;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
-
-.twitter-timeline, {
-	margin-top: 20%;
-	float: center;
-	display: inline;
-}
-
-.LI-profile-badge{
-	margin-right: 15%;
-	float: left;
-	display: inline;
-}
-
-
