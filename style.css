@@ -1,7 +1,7 @@
 
 html{
 	font-family: Didot, serif;
-	color: lightgray;
+	color: darkgray;
 	font-size: 18px;
 	font-weight: 100;
 	line-height: 54px; 
@@ -16,6 +16,12 @@ html{
 
 /* Background image on the home page
 */
+
+
+h1{
+	color:white
+}
+
 .container-home{
 background: url("./images/prot3.gif") black;
 background-position: 90% 55%;
@@ -103,7 +109,6 @@ a{
 }
 
 .approach-content, .training-list{
-	color: white;
 	margin-top:-3%;
 	background-color: black;
 	font-size: 20px;
@@ -238,6 +243,18 @@ font-weight: 100;
   display: none;
   overflow: hidden;
 }
+
+
+.exper-score{
+	margin-left:30%
+}
+
+.exper-seq{
+	background-color:white
+}
+
+
+
 
 
 /*CONNECT*/

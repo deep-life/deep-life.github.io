@@ -26,16 +26,21 @@
 			<h1 class = 'training-intro-header' > Pre-Training</h1>
 
 			<ol>
-				<li> <p class = 'training-list'  onclick="window.location.href ='#training-gan'"  >GAN Training</p></li>
 				<li><p class = 'training-list'  onclick="window.location.href ='#training-fb'">Feedback Net Training</p></li>
+				<li> <p class = 'training-list'  onclick="window.location.href ='#training-gan'"  >GAN Training</p></li>
+
 
 			</ol>
+		</div>
+
+		<div id="training-fb">
+			<h1 class = 'training-header' > Feedback Net Training </h1>
 		</div>
 
         <div id="training-gan">
 			<h1 class = 'training-gan-header' > GAN Training</h1>
 			<p class = "training-gan-info">
-				Generative Adversarial Network was pre-trained on over 20,000 real sequences. The hyperparameters were
+				Generative Adversarial Network was pre-trained on over 23,000 real sequences. The hyperparameters were
 				chosen based on the training loss of the generator and the discriminator, the converging gradient penalty,
 				and the resemblence of the generated outputs to the real sequences.
 
@@ -60,9 +65,6 @@
 			</p>
 		</div>
 
-		<div id="training-fb">
-			<h1 class = 'training-header' > Feedback Net Training </h1>
-		</div>
     </section>
 
 </body>
