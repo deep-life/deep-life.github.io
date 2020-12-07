@@ -1,7 +1,7 @@
 
 html{
 	font-family: Didot, serif;
-	color: white;
+	color: lightgray;
 	font-size: 18px;
 	font-weight: 100;
 	line-height: 54px; 
@@ -88,19 +88,97 @@ background-size: 50%;
 }
 /*APPROACH*/
 
+
+a{
+	color: grey;
+}
 .container{
 	background-color:black;
 }
 
-.approach-intro-image{
-	display: inline-block;
-	float: center;
-	margin-left: 10%
-	width:2500px;
+
+.approach-intro-list{
+	color: darkgray;
+	margin-left:5%
 }
+
+.approach-content{
+	color: white;
+	margin-top:-3%;
+	background-color: black;
+	font-size: 20px;
+	font-family: Didot, serif;
+	cursor: pointer;
+
+}
+
+
+.approach-collapsible{
+	  cursor: pointer;
+
+}
+
+.approach-approach-list-image{
+	display:block;
+	margin-left: 25%;
+	margin-bottom: 2%;
+
+}
+
+.approach-approach{
+	margin-top:5%
+}
+
+.approach-approach-header{
+	font-size:22px
+
+}
+.approach-approach-list-item{
+	margin-bottom:3%;
+	line-height: 2;
+
+}
+
+.approach-approach-list, .approach-lproblem-list{
+	margin-left:10%
+}
+
+
+.approach-intro-image1{
+	display:block;
+	margin-left: 7%;
+}
+
 
 .approach-intro-info{
 }
+
+
+#approach-overview, #approach-lproblem, #approach-gan, #approach-fb {
+	margin-top:10%
+}
+
+.approach-lproblem-image{
+	margin-left:10%;
+	margin-bottom:1%;
+	display:block;
+
+}
+
+.approach-fb-image{
+	margin-left:15%;
+	margin-bottom:5%;
+	display:block;
+
+}
+
+
+.approach-gan-image{
+	margin-left:25%;
+	margin-bottom:5%;
+	display:block;
+}
+
 
 /*TRAINING*/
 
@@ -132,7 +210,7 @@ background-size: 50%;
 font-family: Didot, serif;
 font-variant: small-caps;
 background-color:transparent;
-font-size: 18px;
+font-size: 20px;
 font-weight: 100;
   color: darkgray;
   cursor: pointer;
@@ -149,7 +227,6 @@ font-weight: 100;
 
 .content {
 	font-family: Didot, serif;
-	font-size: 14px;
   display: none;
   overflow: hidden;
 }

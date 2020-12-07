@@ -20,22 +20,164 @@
 		</div>
 	</section>
 
+
 	<section id ="approach">
 		<div class="approach-intro">
-				<h1 class = ="approach-intro-header"> Approach</h1>
-				<p class = 'approach-intro-info' >
-				Generative Adversarial Networks (GANs) learn patterns and structures from the real data and harnesses
-					this information to create novel data <a href = "https://arxiv.org/abs/1406.2661" style="color:lightpink"> (Goodfellow et al., 2014) </a>.
 
-					We have trained a Generative Adversarial Network (GAN) to produce novel protein sequences and optimize
-					the sequences to contain desired structural properties.
+			<h1 class = ="approach-intro-header"> Approach</h1>
+			<ol>
+				<li> <p class = 'approach-content'  onclick="window.location.href ='#approach-overview'"  >Overview</p></li>
+				<li><p class = 'approach-content'  onclick="window.location.href ='#approach-lproblem'">Learning Problem</p></li>
+				<li><p class = 'approach-content'  onclick="window.location.href ='#approach-fb'">Feedback Net Architecture</p></li>
+				<li><p class = 'approach-content' onclick="window.location.href ='#approach-gan'" >GAN Architecture</p></li>
+			</ol>
+
+			<!--		Overview-->
+			<div id ="approach-overview">
+<!--				class = "approach-intro-header" -->
+				<h1 class="approach-intro-header">1. Overview</h1>
+				<p class = 'approach-intro-info' >
+					<img class = "approach-intro-image1" src="./images/FBGAN_scheme2.png" width = 80%>
+
+							Generative Adversarial Networks (GANs) learn patterns and structures from the real data and harnesses
+							this information to create novel data <a href = "https://arxiv.org/abs/1406.2661" style="color:darkgray"> (Goodfellow et al., 2014) </a>.
+
+							We have used a Generative Adversarial Network coupled with Feedback Network
+							to produce novel protein sequences optimized to contain specific 3D structural properties.
+					This implements and extends the feedback loop mechanism desrcibed by <a href = https://arxiv.org/abs/1804.01694> Gupta et al. 2019</a>.
 				</p>
-				<div class="approach-intro-image">
-				        <img src="./images/Approach.png" alt="Feedback GAN" width = 90%>
-     			 </div>
+
+				<div class = "approach-approach">
+					<h1 class ="approach-approach-header"> Our approach is: </h1>
+					<ol class = 'approach-approach-list'>
+						<li class = 'approach-approach-list-item'>
+							Train GAN to produce realistically looking sequences.
+						</li>
+
+						<li class = 'approach-approach-list-item'>
+							Train Feedback Net to recognize presence of 8 structural features in protein sequences.
+							<img class = 'approach-approach-list-image' src = ./images/approach-score.png width = 50% alt="Scores">
+						</li>
+
+						<li class = 'approach-approach-list-item'>
+							Pass the sequences produced by the Generator the the Feedback Net and score them.
+						</li>
+
+						<li class = 'approach-approach-list-item'>
+							If all desired structural properties in the generated sequences pass a pre-set treshold score,
+							add them to the real training set of the Discriminator.
+							Continue until the Generator learns important patterns of the top-scoring sequences and produces desired
+							features.
+							<img class = 'approach-approach-list-image' src = ./images/approach-gd.png width = 35% style = "margin-left: 35%; margin-top: -2%;" alt="GD">
+						</li>
+
+						<li class = 'approach-approach-list-item'>
+							For top scoring sequences, visualize predict homology structure with tools such as Swiss Model.
+						</li>
+					</ol>
+				</div>
+
+			</div>
+
+
+			<!--		Learning problem-->
+			<div id ="approach-lproblem">
+				<h1 class="approach-header">2. Learning Problem</h1>
+				<p class = 'approach-lproblem-info' >
+<!--					<img class = "approach-lproblem-image" src="./images/prot1.jpg" width = 80%>-->
+					<img class = approach-lproblem-image src = "./images/approach-struc2.png", width=60% style="margin-left: 20%">
+
+					Designing novel protein structures is important both for
+					protein-based drug development and genetic engineering. We created a generative model that produces
+					sequences with one or more structural properties  <a href="./experiments.html"> (see experiments) </a>.
+
+
+					<br><br>
+					Protein sequences consist of 20 possible amino acids, each
+					determined by a triplet of 4 possible DNA letters (A, T, C, G). For example an amino-acid
+					lysin (letter code L) is coded as AAG in the DNA code. We have used this property to
+					to reduce the complexity of the problem - instead of learning 20 character, it suffices to learn
+					only 4, and trained the model to produce valid DNA sequences. These are then translated into the
+					protein sequence.
+
+    				<img class = approach-lproblem-image src = "./images/approach-transl.png", width=60% style="margin-left: 20%">
+					<br> <br>
+
+				</p>
+
+				<p class = "approach-lrproblem-info">
+					<b>Structural properties of protein sequences</b>
+					<img class = approach-lproblem-image src = "./images/approach-struc1.png", width=65% style="margin-left: 20%">
+					Our model produces sequences that are predicted to contain specific secondary structures. There are
+					8 recognized secondary protein structures, with associated letter codes.
+					Formally, the problem of predicting these structures from sequences is called the Q8-problem.
+					<ol class = approach-lproblem-list">
+						<li >helix (G)</li>
+						<li> α-helix (H)</li>
+						<li>π-helix (I)</li>
+						<li> β-stand (E)</li>
+						<li>bridge (B)</li>
+						<li>turn (T)</li>
+						<li> bend (S)</li>
+						<li>coil (C) </li>
+					</ol>
+
+				</p>
+
+				<p class = "approach-lrproblem-info">
+					Previous work on topic of feature optimization <a href = https://arxiv.org/abs/1804.01694> (Gupta et al. 2019)</a>
+					focused on optimizing for one structure - alpha helices (H).
+					However, as discovered during exploratory data analysis,
+					this state is extremely common in proteins and, thus, is less challenging to optimize for.
+					In this work we extended the approach to other structures and to optimize for multiple combinations
+					of different structures at the same time.
+				</p>
+
+
+
+			</div>
+
+			<!--		Feedback Net-->
+			<div id ="approach-fb">
+				<h1 class="approach-header">3. Feedback Net Architecture</h1>
+				<p class = 'approach-fb-info' >
+					<img class = "approach-fb-image" src="./images/Feedback.png" width = 70%>
+					Description of the Feedback Network.Description of the Feedback Network.Description of the Feedback Network.
+					Description of the Feedback Network.
+					Description of the Feedback Network.
+					Description of the Feedback Network.Description of the Feedback Network.
+					Description of the Feedback Network.Description of the Feedback Network.
+					Description of the Feedback Network.
+
+				</p>
+			</div>
+
+			<!--		GAN-->
+			<div id ="approach-gan">
+				<h1 class="approach-header">4. GAN Architecture</h1>
+				<p class = 'approach-gan-info' >
+					<img class = "approach-gan-image" src="./images/GAN.png" width = 50%>
+
+							The architecture of the generative network was adapted from <a href = https://arxiv.org/abs/1704.00028>Gulrajani et al. 2017</a>
+					and <a href = https://arxiv.org/abs/1804.01694> Gupta et al. 2019</a>. The architecture is designed for language models and other sequences.
+					It consists of five Residual Blocks that perform 1D convolution operations and upsampling in the generator followed by downsampling in the discriminator.
+					The Wasserstein loss coupled with gradient penalty ensure stability of the model and enforce a Lipschitz constraint on the discriminator.
+
+
+
+				</p>
+			</div>
+
+
+
+
+<!--				<div class="approach-intro-image2">-->
+<!--				        <img src="./images/Approach.png" alt="Feedback GAN" width = 90%>-->
+<!--     			 </div>-->
 
 
 		</div>
 	</section>
 </body>
 </html>
+
