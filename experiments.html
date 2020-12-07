@@ -35,9 +35,13 @@
 			</div>
 		</li>
 		<li>
-			<button type="button" class="collapsible">Read about experiment 3</button>
+			<button type="button" class="collapsible">Optimizing for rare singular features</button>
 			<div class="content">
-  			<p>Graphs and content</p>
+  			<p>I (Pi Helix) is one of the rarest features and is found in only around 15% of known proteins.
+The optimization process for this feature ended up being the hardest, with an average score of 0% appearing during a number of epochs. In our previous experiments, we used a score of 0.8+ as the threshold for adding the sequence to the dataset.  However, because the feature is so rare, we took the threshold down to 0.1 for this experiment. In other words, if there was an even 10% chance of the sequence having alpha-helix, we were adding it to the dataset. It speeded up the update of our dataset for discriminator but not significantly. On the score history below we can see that percent of fake sequences in the dataset barely approached _ % after 50 epochs (with _ new samples added overall)
+
+The averaged score remained zero throughout the training. You can download the training history for Pi-helix below
+</p>
 			</div>
 		</li>
 		<ul>

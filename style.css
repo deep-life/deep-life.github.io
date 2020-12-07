@@ -103,6 +103,24 @@ background-size: 50%;
 }
 
 /*TRAINING*/
+.training-fb-header{
+	margin-top:5%
+}
+
+.training-fb-info{
+	color:darkgray;
+}
+
+
+.training-fb-header-image{
+	width:80%;
+	margin-left:5%;
+	display:block;
+
+}
+
+.training-gan-header-image-biochem{
+}
 
 .training-gan-header{
 	margin-top:5%
