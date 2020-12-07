@@ -34,9 +34,11 @@
 		<div id="training-fb">
 			<h1 class = 'training-header' > Feedback Net Training </h1>
 			<p class = "training-fb-info">
-				The overall problem of Q8-prediction remains a challenge inthe field.   Recent advancement for AlphaFold established abenchmark during CASP14 with score of 92.4 out of 100 forGlobal Distance Test.  Given the complexity of this problem,we omit the exact positioning of the structure for the purposesof this publication and focus just on whether it appears in anygiven sequence or no. </br>
+				The overall problem of Q8-prediction remains a challenge in the field.  <a style="color:lightpink"  href ="https://www.nature.com/articles/d41586-020-03348-4">
+				Recent advancement for AlphaFold
+			</a> established a benchmark during CASP14 with score of 92.4 out of 100 for Global Distance Test (GDT).  Given the complexity of this problem,we omit the exact positioning of the structure for the purposes of this publication and focus just on whether it appears in any given sequence or no. </br>
 
-				The Feedback Network was implemented as a multi-labelclassifier.   More  specifically,  the  last  layer  of  the  networkconsists of eight nodes, each with sigmoid activation and thenetwork utilizes the binary cross-entropy loss.  Given the se-quence, language-like, nature of the problem we implementedan architecture that combines combine an embedding layer,bidirectional LSTMs, and a time-distributed output.
+				The Feedback Network was implemented as a multi-label classifier.   More  specifically,  the  last  layer  of  the  network consists of eight nodes, each with sigmoid activation and the network utilizes the binary cross-entropy loss.  Given the sequence, language-like, nature of the problem we implemented an architecture that combines combine an embedding layer and bidirectional LSTMs.
 			</p>
 			<img class="training-fb-header-image" src="./images/feedback-metrics.png" alt="Feedback metrics" width = 70%>
 		</div>
