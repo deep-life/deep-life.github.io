@@ -20,30 +20,7 @@
 		</div>
 	</section>
 
-
-	<section id ="training">
-		<div class = 'training-intro'>
-			<h1 class = 'training-intro-header' > Pretraining GAN and Feedback Net</h1>
-			About pretraining
-			<ul>
-				<li>
-					GAN pretraining
-				</li>
-				<li>
-					Feedback pretraining
-				</li>
-			</ul>
-        </div>
-        <div class="training-fb">
-        	<h1 class = 'training-fb-header' > Feedback Net </h1>
-        	<p class = "training-fb-info">
-        		<img class="training-fb-header-image" src="./images/feedback-metrics.png" alt="Feedback metrics" width = 70%>
-
-
-        </div>
-
         <div class="training-gan">
-			<h1 class = 'training-gan-header' > GAN </h1>
 			<h1 class = 'training-intro-header' > Pre-Training</h1>
 
 			<ol>
@@ -56,7 +33,16 @@
 
 		<div id="training-fb">
 			<h1 class = 'training-header' > Feedback Net Training </h1>
+			<p class = "training-fb-info">
+				The overall problem of Q8-prediction remains a challenge inthe field.   Recent advancement for AlphaFold established abenchmark during CASP14 with score of 92.4 out of 100 forGlobal Distance Test.  Given the complexity of this problem,we omit the exact positioning of the structure for the purposesof this publication and focus just on whether it appears in anygiven sequence or no. </br>
+
+				The Feedback Network was implemented as a multi-labelclassifier.   More  specifically,  the  last  layer  of  the  networkconsists of eight nodes, each with sigmoid activation and thenetwork utilizes the binary cross-entropy loss.  Given the se-quence, language-like, nature of the problem we implementedan architecture that combines combine an embedding layer,bidirectional LSTMs, and a time-distributed output.
+			</p>
+			<img class="training-fb-header-image" src="./images/feedback-metrics.png" alt="Feedback metrics" width = 70%>
 		</div>
+
+
+
 
         <div id="training-gan">
 			<h1 class = 'training-gan-header' > GAN Training</h1>
