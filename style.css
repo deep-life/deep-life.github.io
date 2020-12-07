@@ -48,7 +48,7 @@ background-size: 50%;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.topnav a.current {
   color: white;
 }
 
@@ -128,8 +128,31 @@ background-size: 50%;
 /*EXPERIMENTS*/
 
 
+.collapsible {
+font-family: Didot, serif;
+font-variant: small-caps;
+background-color:transparent;
+font-size: 18px;
+font-weight: 100;
+  color: darkgray;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
 
+.active, .collapsible:hover {
+	color:white;
+}
 
+.content {
+	font-family: Didot, serif;
+	font-size: 14px;
+  display: none;
+  overflow: hidden;
+}
 
 
 /*CONNECT*/

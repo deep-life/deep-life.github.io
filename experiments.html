@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en">
 <link rel="stylesheet" href="style.css">
-
 <head>
 	<title>fbGAN | Experiments</title>
 </head>
@@ -15,39 +14,52 @@
 			  <a href="./approach.html"> Approach </a>
 			  <a href="./dataset.html"> Dataset </a>
 			  <a href="./training.html"> Training </a>
-			  <a class="active" href="./experiments.html"> Experiments </a>
+			  <a class="current" href="./experiments.html"> Experiments </a>
 			  <a href="./connect.html">Connect</a>
 		</div>
 	</section>
-
 	<section id ="exper">
-		<div class = 'exper-intro'>
-			<h1 class = 'exper-intro-header' > Experiments</h1>
-			<ul>
-				<li>
-					Optimizing for single features
-					<br>
+		<h1 class = 'exper-intro-header' > Experiments</h1>
 
-				<li>
-					Optimizing for combinations of features
-				</li>
-			</ul>
-
-		</div>
-
-
-
-		<div class="exper-singfeats">
-		</div>
-
-
-		<div class="exper-combfeats">
-		</div>
-
-
-
+		<ul>
+		<li>
+			<button type="button" class="collapsible">Read about experiment 1</button>
+			<div class="content">
+  			<p>Graphs and content</p>
+			</div>
+		</li>
+		<li>
+			<button type="button" class="collapsible">Read about experiment 2</button>
+			<div class="content">
+  			<p>Graphs and content</p>
+			</div>
+		</li>
+		<li>
+			<button type="button" class="collapsible">Read about experiment 3</button>
+			<div class="content">
+  			<p>Graphs and content</p>
+			</div>
+		</li>
+		<ul>
 
 	</section>
 
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
