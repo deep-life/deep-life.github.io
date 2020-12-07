@@ -94,11 +94,12 @@ background-size: 50%;
 
 .approach-intro-image{
 	display: inline-block;
+	float: center;
 	margin-left: 10%
+	width:2500px;
 }
 
 .approach-intro-info{
-	color:darkgray;
 }
 
 /*TRAINING*/
