@@ -277,6 +277,17 @@ font-weight: 100;
 
 /*CONNECT*/
 
+.column {
+  float: left;
+  font-size: 12px;
+  width: 50%;
+}
+
+.row:after {
+  display: table;
+  clear: both;
+}
+
 .connect-connect{
 }
 
@@ -285,7 +296,7 @@ font-weight: 100;
 }
 
 .connect-connect-info{
-	margin-left:15%
+	margin-left:5%
 }
 
 .connect-authors-github{
