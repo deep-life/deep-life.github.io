@@ -23,29 +23,25 @@
 
 	<section id ="training">
 		<div class = 'training-intro'>
-			<h1 class = 'training-intro-header' > Pretraining GAN and Feedback Net</h1>
-			About pretraining
-			<ul>
-				<li>
-					GAN pretraining
-				</li>
-				<li>
-					Feedback pretraining
-				</li>
-			</ul>
-        </div>
+			<h1 class = 'training-intro-header' > Pre-Training</h1>
 
-        <div class="training-gan">
-			<h1 class = 'training-gan-header' > GAN </h1>
+			<ol>
+				<li> <p class = 'training-list'  onclick="window.location.href ='#training-gan'"  >GAN Training</p></li>
+				<li><p class = 'training-list'  onclick="window.location.href ='#training-fb'">Feedback Net Training</p></li>
+
+			</ol>
+		</div>
+
+        <div id="training-gan">
+			<h1 class = 'training-gan-header' > GAN Training</h1>
 			<p class = "training-gan-info">
 				Generative Adversarial Network was pre-trained on over 20,000 real sequences. The hyperparameters were
 				chosen based on the training loss of the generator and the discriminator, the converging gradient penalty,
 				and the resemblence of the generated outputs to the real sequences.
 
 
-			<img  class="training-gan-header-image-loss"
-							  src="./images/GAN_loss2_web.png" alt="Feedback GAN" width = 70%>
-
+			<iframe id="igraph"  class ='training-gan-loss' scrolling="no" style="border:none;" seamless="seamless"
+						src="./images/gan_loss.html" height="700" width="120%"></iframe>
 			<br>
 			In particular, notice the shift of the biochemical properties of the generated sequences as compared to
 			the real ones. These properties were analyzed using metrics the model has never, using a
@@ -57,17 +53,15 @@
 				to match almost all parameters after 20 epochs.
 
 
-<!--				<iframe src="./images/GAN_biochem.html"  width="1000" height="700" ></iframe>-->
-				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-						src="./images/GAN_biochem.html" height="525" width="100%"></iframe>
+				<iframe id="igraph"  class ='training-gan-biochem' scrolling="no" style="border:none;" seamless="seamless"
+						src="./images/GAN_biochem.html" height="700" width="120%"></iframe>
 
-<!--			 	<img class="training-gan-header-image-biochem"-->
-<!--							 src="./images/GAN_biochem_web.png" alt="Feedback GAN" width = 90%>-->
 
 			</p>
 		</div>
 
-		<div class="training-fb">
+		<div id="training-fb">
+			<h1 class = 'training-header' > Feedback Net Training </h1>
 		</div>
     </section>
 

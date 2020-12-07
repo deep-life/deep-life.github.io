@@ -22,13 +22,30 @@
 
 	<section id ="dataset">
 		<div class="dataset-intro">
-				<h1 class ="dataset-intro-header"> Dataset</h1>
-				<div class="description">blah blah</div>
-				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="pieplot.html" height="525" width="100%"></iframe>
-		<div class="description">blah blah</div>
+				<h1 class ="dataset-intro-header">Dataset: Feedback Net</h1>
+				<div class="description">
 
-		<div class="iframe">
-				<iframe id="igraph" style="border:none;" margin-left="200px" scrolling="no" seamless="seamless" src="cndprob.html" height="525" width="100%"></iframe></div>
+					Bla bla.
+				</div>
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="pieplot.html" height="525" width="100%"></iframe>
+
+				<div class="description"></div>
+					<div class="iframe">
+							<iframe id="igraph" style="border:none;" margin-left="200px" scrolling="no" seamless="seamless" src="cndprob.html" height="525" width="100%"></iframe></div>
+				</div>
+
+		<div class = 'dataset-intro'>
+			<h1 class ="dataset-intro-header">Dataset: GAN</h1>
+			The dataset of protein sequences used for GAN pre-training was obtained from open-source
+			<a href="https://www.kaggle.com/alfrandom/protein-secondary-structure">Protein Secondary Structure Dataset</a> from Kaggle.
+			The whole dataset contains 95,915 samples of varying length with up to 800 amino acids in a sequence.
+			We have used sequences with up to 75 amino acids (= 225 letters in DNA coding). This resuls in over 24,000 training samples.
+			<br><br>
+			To limit the number of characters GAN has to learn, protein samples in this dataset were translated to DNA sequences. This
+			translation is one-to-one (with a few expections that are not-siginificant for this task) and thus no information is lost
+			during translation.
+
+
 		</div>
 	</section>
 </body>

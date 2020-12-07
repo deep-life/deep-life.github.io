@@ -89,7 +89,7 @@
 
 					Designing novel protein structures is important both for
 					protein-based drug development and genetic engineering. We created a generative model that produces
-					sequences with one or more structural properties  <a href="./experiments.html"> (see experiments) </a>.
+					sequences with one or more structural properties  <a href="./experiments.html"> (see Experiments)</a>.
 
 
 					<br><br>
@@ -99,6 +99,10 @@
 					to reduce the complexity of the problem - instead of learning 20 character, it suffices to learn
 					only 4, and trained the model to produce valid DNA sequences. These are then translated into the
 					protein sequence.
+					The translation is deterministic and one-to-one *. Thus, it is possible to go back and forth between DNA and protein
+					sequences to lower the computational expenses.
+					<br>
+					(*with a few expections that are not-siginificant for this task)
 
     				<img class = approach-lproblem-image src = "./images/approach-transl.png", width=60% style="margin-left: 20%">
 					<br> <br>

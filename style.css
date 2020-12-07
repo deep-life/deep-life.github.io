@@ -90,7 +90,7 @@ background-size: 50%;
 
 
 a{
-	color: grey;
+	color: lightpink;
 }
 .container{
 	background-color:black;
@@ -102,7 +102,7 @@ a{
 	margin-left:5%
 }
 
-.approach-content{
+.approach-content, .training-list{
 	color: white;
 	margin-top:-3%;
 	background-color: black;
@@ -191,14 +191,22 @@ a{
 }
 
 
-.training-gan-header-image-loss{
+.training-gan-image-loss{
 	margin-left:12%;
 	display:block;
 
 }
 
-.training-gan-header-image-biochem{
+.training-gan-biochem{
+	margin-left:-10%
 }
+
+.training-gan-loss{
+	margin-left:5%;
+	margin-bottom: -18%;
+}
+
+
 
 
 
