@@ -38,9 +38,14 @@
 				Recent advancement for AlphaFold
 			</a> established a benchmark during CASP14 with score of 92.4 out of 100 for Global Distance Test (GDT).  Given the complexity of this problem,we omit the exact positioning of the structure for the purposes of this publication and focus just on whether it appears in any given sequence or no. </br>
 
-				The Feedback Network was implemented as a multi-label classifier.   More  specifically,  the  last  layer  of  the  network consists of eight nodes, each with sigmoid activation and the network utilizes the binary cross-entropy loss.  Given the sequence, language-like, nature of the problem we implemented an architecture that combines combine an embedding layer and bidirectional LSTMs.
+				The Feedback Network was implemented as a multi-label classifier.   More  specifically,  the  last  layer  of  the  network consists of eight nodes, each with sigmoid activation and the network utilizes the binary cross-entropy loss.  Given the sequence, language-like, nature of the problem we implemented an architecture that combines an embedding layer and bidirectional LSTMs.</br>
+
+				While we included accuracy in the evaluation process, it is not the most descriptive metric for an unbalanced dataset. If we were to label all the classes as C,H,E, we would be right in most cases, and get high accuracy, but such labeling would not be useful as a feedback mechanism. Thus, precision, recall and hinge loss were used to evaluate the successfulness of multilabeling.
 			</p>
 			<img class="training-fb-header-image" src="./images/feedback-metrics.png" alt="Feedback metrics" width = 70%>
+			<p class = "training-fb-info">
+				Overall all metrics had a high enough performance. The only class that turned out to be problematic is pi-helix (I), as it comprised less than 0.3% of the training dataset.
+			</p>
 		</div>
 
 
