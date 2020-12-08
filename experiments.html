@@ -21,7 +21,7 @@
 
 
 	<section id ="exper">
-		Experiments
+		<h1 class = 'training-intro-header' > Experiments</h1>
 		<ul>
 			<!-- FIRST SECTION -->
 			<li>
@@ -29,16 +29,39 @@
 			<div class="content">
 				<ul>
 					<li>
-					<button type="button" class="collapsible">Experiment 1</button>
+					<button type="button" class="collapsible">Common single features ( H / E) </button>
 					<div class="content">
-						description + graphs
+						First, we optimized the sequences for three most common features: C, H, E. Feature C is, however, already present in almost every sequence with an average score of 100% throughout the run. Thus, only features E and H are shown. Within 7 epochs, the probability of observing the feature E increased from 40% to 69%. For H, we observed an increase.
+
+					<div class = 'row'>
+						 <div class = 'column' style ="margin-left:-20%">
+							<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/E_2.html" height="400" width="100%"></iframe>
+						 </div>
+
+ 						<div class = 'column'>
+						<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/H_1.html" height="400" width="100%"></iframe>
+						</div>
+					</div>
+
 					</div>
 					</li>
 
 					<li>
-					<button type="button" class="collapsible">Experiment 2</button>
+					<button type="button" class="collapsible">Rare single feature (I) </button>
 					<div class="content">
-						description + graphs
+						(Pi Helix) is one of the rarest features and is found in only around 15% of known proteins.
+						The optimization process for this feature ended up being the hardest, with an average score of 0% appearing during a number of epochs. 
+						In our previous experiments, we used a score of 0.8+ as the threshold for adding the sequence to the dataset. 
+						 However, because the feature is so rare, we took the threshold down to 0.1 for this experiment. In other words, if there was an even 10% chance of the sequence having alpha-helix, we were adding it to the dataset. </br>
+
+						After some time, the generator actually starts producing the sequences that exceed a 20% chance of belonging to the pi-helix class. 
+						At that point, the size of the dataset starts reaching a million sequences - which are problematic to keep in the running memory.
+						 Future optimization to our code might include getting read of the old sequences while continually adding new and better ones. 
+						 Alternatively, RAM problems can be avoided by creating a flexible threshold that gets higher once the generator outputs sequences that are more successful. 
+						<iframe id="igraph"  scrolling="no" style="border:none;" seamless="seamless" src="./images/experiments/I_experiment.html" height="525" width="90%"></iframe>
+
 					</div>
 					</li>
 				</ul>
