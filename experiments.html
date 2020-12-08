@@ -28,11 +28,11 @@
 			<li>
 			<button type="button" class="collapsible">Optimizing for common features</button>
 				<div class="content">
-  					<h2> Multiple common features: E,H </h2>
+  					<h2> Single common features: E,H </h2>
 					<p> First, we optimized the sequences for three most common features: C,H,E. The feature C is, however,
 					already present in almost every sequence with am average score 100% throughout the run. Thus, only
 					features E and H are shown. Within 7 epochs, the probability of observing the feature E increased from 40%
-					to 69%. For H,
+					to 69%. For H, we observed an increase
 					</p>
 
 					<div class = 'row'>
@@ -45,7 +45,9 @@
 						<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
 							src="./images/experiments/H_1.html" height="400" width="100%"></iframe>
 						</div>
-				</div>
+					</div>
+
+
 				</div>
 			</li>
 
@@ -83,12 +85,41 @@
 					<h2> Multiple rare features</h2>
 						<p>Finally, we tried optimization for three rare structures. This is especially difficult
 							task since the features are not well represented. Even after 100 epochs, the probability of
-							features being present increased by around 5%. 
-							.</p>
+							features being present increased by around 5%.
+						</p>
 						<iframe class = 'graph' id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
 							src="./images/experiments/IBG_7.html" height="400" width="100%"></iframe>
 				</div>
 			</li>
+
+
+			<li>
+			<button type="button" class="collapsible">Mode collapse</button>
+				<div class="content">
+  					<h2>Mode collapse </h2>
+
+					 <div class = 'column' >
+
+
+					It is known that GAN models are prone to mode collapse where the generator simply repeats
+					one output over and over. In the future, we aim to add a similarity penalty to the sequences
+					(Linder et al. 2020) that would force the generator to create different sequences.
+					In the meantime, we used a simple edit distance metric that measures sequence similarity to
+					monitor how different generated sequences are, before and after optimization. The following graph
+					is for the optimization of the feature H (before optimization and after optimization).
+
+						 <iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/edit_H.html" height="400" width="100%" ' ></iframe>
+						 </div>
+
+
+					</div>
+
+
+				</div>
+			</li>
+
+
 		</ul>
 
 

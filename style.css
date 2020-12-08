@@ -242,7 +242,8 @@ a{
 
 .training-fb-header-image{
 	width:80%;
-	margin-left:5%;
+	margin-left:10%;
+	margin-top:5%;
 	display:block;
 
 }
@@ -266,7 +267,7 @@ a{
 }
 
 .training-gan-biochem{
-	margin-left:-10%
+	margin-left:3%
 }
 
 .training-gan-loss{
@@ -322,6 +323,9 @@ font-weight: 100;
 	margin-left:20%
 }
 
+.exper-para{
+	display: block
+}
 
 
 /*CONNECT*/
