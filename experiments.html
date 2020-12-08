@@ -24,6 +24,7 @@
 		<h1 class = 'exper-intro-header' > Experiments</h1>
 
 		<ul>
+<<<<<<< HEAD
 		<li>
 			<button type="button" class="collapsible">Common features</button>
 			<div class="content">
@@ -57,41 +58,104 @@ After some time, generator actually starts producing the sequences that exceed 2
 				Strikingly, for H and E, the probability of presence increase from 62.5% and 41%, to 78.5% and 74%, respectively. </p>
 					<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
 							src="./images/experiments/CHE_2.html" height="400" width="100%"></iframe>
-				</div>
+=======
 
-				<div class = 'experiment'>
-				<p><b>Common and Rare Features</b></p>
-				<p>2 rare features: E,T,G </p>
-					<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+			<li>
+			<button type="button" class="collapsible">Optimizing for common features</button>
+				<div class="content">
+  					<h2> Single common features: E,H </h2>
+					<p> First, we optimized the sequences for three most common features: C,H,E. The feature C is, however,
+					already present in almost every sequence with am average score 100% throughout the run. Thus, only
+					features E and H are shown. Within 7 epochs, the probability of observing the feature E increased from 40%
+					to 69%. For H, we observed an increase
+					</p>
+
+					<div class = 'row'>
+						 <div class = 'column' style ="margin-left:-20%">
+							<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/E_2.html" height="400" width="100%"></iframe>
+						 </div>
+
+ 						<div class = 'column'>
+						<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/H_1.html" height="400" width="100%"></iframe>
+						</div>
+					</div>
+
+
+>>>>>>> 508703cd4f9062268f8e8a67cb2c40801bbd0bd6
+				</div>
+			</li>
+
+			<li>
+			<button type="button" class="collapsible">Optimizing for rare features</button>
+				<div class="content">
+  					<p>I (Pi Helix) is one of the rarest features and is found in only around 15% of known proteins.
+					The optimization process for this feature ended up being the hardest, with an average score of 0% appearing during a number of epochs. In our previous experiments, we used a score of 0.8+ as the threshold for adding the sequence to the dataset.  However, because the feature is so rare, we took the threshold down to 0.1 for this experiment. In other words, if there was an even 10% chance of the sequence having alpha-helix, we were adding it to the dataset. It speeded up the update of our dataset for discriminator but not significantly. On the score history below we can see that percent of fake sequences in the dataset barely approached _ % after 50 epochs (with _ new samples added overall)
+
+					The averaged score remained zero throughout the training. You can download the training history for Pi-helix below
+					</p>
+				</div>
+			</li>
+
+			<li>
+			<button type="button" class="collapsible">Optimizing for multiple features at once</button>
+				<div class="content">
+					<h2> Multiple common features </h2>
+  						<p>
+						To see if the network is able to learn several features at once, we have performed
+						simultaneous enrichement for three most common features.
+						The initial score for feature C was already 100% and thus no improvement can be observed there.
+						Strikingly, for H and E, the probability of presence increase from 62.5% and 41%, to 78.5% and 74%, respectively.
+						<iframe class = 'graph' id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/CHE_2.html" height="400" width="100%"></iframe>
+						</p>
+
+					<h2> Combination of rare and common features </h2>
+						<p>Next, we optimized for a combination of rare and common features. Specifically, two rare features
+						(T,G) were enriched simultaneously with a more common feature (C).</p>
+						<iframe class = 'graph' id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
 							src="./images/experiments/ETG_4.html" height="400" width="100%"></iframe>
 
-					<iframe class ='exper-seq' width="100%"
-				src=http://www.compbio.dundee.ac.uk/jpred4/results/jp_1_dd6bR/jp_1_dd6bR.simple.html>
-				</iframe>
-					
-					<iframe class ='exper-seq' width="100%"
-				src=http://www.compbio.dundee.ac.uk/jpred4/results/jp_qEGfE0I/jp_qEGfE0I.simple.html>
-				</iframe>
+
+					<h2> Multiple rare features</h2>
+						<p>Finally, we tried optimization for three rare structures. This is especially difficult
+							task since the features are not well represented. Even after 100 epochs, the probability of
+							features being present increased by around 5%.
+						</p>
+						<iframe class = 'graph' id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/IBG_7.html" height="400" width="100%"></iframe>
+				</div>
+			</li>
+
+
+			<li>
+			<button type="button" class="collapsible">Mode collapse</button>
+				<div class="content">
+  					<h2>Mode collapse </h2>
+
+
+
+					It is known that GAN models are prone to mode collapse where the generator simply repeats
+					one output over and over. In the future, we aim to add a similarity penalty to the sequences
+					(Linder et al. 2020) that would force the generator to create different sequences.
+					In the meantime, we used a simple edit distance metric that measures sequence similarity to
+					monitor how different generated sequences are, before and after optimization. The following graph
+					is for the optimization of the feature H (before optimization and after optimization).
+
+						 <iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/edit_H3.html" height="400" width="100%" style="margin-left:-10%" ></iframe>
+						 </div>
 
 
 
 				</div>
+			</li>
 
 
+		</ul>
 
-				<div class = 'experiment'>
-				<p><b>Rare Features</b></p>
-				<p>To see if the network is able to learn several features at once, we have performed
-				simultaneous enrichement for three most common features.
-				The initial score for feature C was already 100% and thus no improvement can be observed there.
-				Strikingly, for H and E, the probability of presence increase from 62.5% and 41%, to 78.5% and 74%, respectively. </p>
-					<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
-							src="./images/experiments/CHE_2.html" height="400" width="100%"></iframe>
-				</div>
 
-			</div>
-		</li>
-		<ul>
 
 	</section>
 

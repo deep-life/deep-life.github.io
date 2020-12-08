@@ -22,8 +22,13 @@ h1{
 	color:white
 }
 
+h2{
+	color:darkgray;
+	font-size: 22px
+}
+
 .container-home{
-background: url("./images/prot3.gif") black;
+background: url("images/approach/prot3.gif") black;
 background-position: 90% 55%;
 background-attachment: fixed;
 background-repeat: no-repeat;
@@ -83,15 +88,7 @@ background-size: 50%;
 	height: 100%
 }
 
-/*DATASET*/
-.iframe{
-	margin-left: 180px;
-}
 
-.description{
-	display: inline-block;
-	margin-left: 10%
-}
 /*APPROACH*/
 
 
@@ -102,6 +99,13 @@ a{
 	background-color:black;
 }
 
+.approach-header{
+	color:white
+}
+
+.approach-subheader{
+	font-size:22px
+}
 
 .approach-intro-list{
 	color: darkgray;
@@ -144,8 +148,15 @@ a{
 
 }
 
-.approach-approach-list, .approach-lproblem-list{
+.approach-approach-list{
 	margin-left:10%
+}
+
+.approach-lproblem-list{
+	columns: 2;
+	margin-left: 25%;
+	margin-right:20%
+
 }
 
 
@@ -170,6 +181,11 @@ a{
 
 }
 
+.approach-lrproblem-struc{
+	font-size:25px
+
+}
+
 .approach-fb-image{
 	margin-left:15%;
 	margin-bottom:5%;
@@ -185,10 +201,39 @@ a{
 }
 
 
-/*TRAINING*/
-.training-fb-header{
-	margin-top:5%
+
+/*DATASET*/
+.iframe{
+	margin-left: 180px;
 }
+
+.description{
+	display: inline-block;
+	margin-left: 10%
+}
+
+
+/*TRAINING*/
+
+.training-list{
+	margin-top:-3%;
+	color: darkgray;
+	font-size: 20px;
+	font-family: Didot, serif;
+	cursor: pointer;
+}
+
+.training-intro-header, .training-fb-header, .training-gan-header{
+	font-size:27px
+}
+
+#training-fb, #training-gan{
+	margin-top:10%
+}
+
+.training-fb-header{
+}
+
 
 .training-fb-info{
 	color:darkgray;
@@ -197,7 +242,8 @@ a{
 
 .training-fb-header-image{
 	width:80%;
-	margin-left:5%;
+	margin-left:10%;
+	margin-top:5%;
 	display:block;
 
 }
@@ -221,7 +267,7 @@ a{
 }
 
 .training-gan-biochem{
-	margin-left:-10%
+	margin-left:3%
 }
 
 .training-gan-loss{
@@ -260,6 +306,7 @@ font-weight: 100;
 	font-family: Didot, serif;
   display: none;
   overflow: hidden;
+	margin-left:5%
 }
 
 
@@ -271,15 +318,21 @@ font-weight: 100;
 	background-color:white
 }
 
+.graph{
+	margin-top:-5%;
+	margin-left:20%
+}
 
-
+.exper-para{
+	display: block
+}
 
 
 /*CONNECT*/
 
 .column {
   float: left;
-  font-size: 12px;
+  font-size: 15px;
   width: 50%;
 }
 

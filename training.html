@@ -20,7 +20,7 @@
 		</div>
 	</section>
 
-        <div class="training-gan">
+        <div class="training-intro">
 			<h1 class = 'training-intro-header' > Pre-Training</h1>
 
 			<ol>
@@ -32,7 +32,7 @@
 		</div>
 
 		<div id="training-fb">
-			<h1 class = 'training-header' > Feedback Net Training </h1>
+			<h1 class = 'training-fb-header' > Feedback Net Training </h1>
 			<p class = "training-fb-info">
 				The overall problem of Q8-prediction remains a challenge in the field.  <a style="color:lightpink"  href ="https://www.nature.com/articles/d41586-020-03348-4">
 				Recent advancement for AlphaFold
@@ -42,10 +42,14 @@
 
 				While we included accuracy in the evaluation process, it is not the most descriptive metric for an unbalanced dataset. If we were to label all the classes as C,H,E, we would be right in most cases, and get high accuracy, but such labeling would not be useful as a feedback mechanism. Thus, precision, recall and hinge loss were used to evaluate the successfulness of multilabeling.
 			</p>
+<<<<<<< HEAD
 			<img class="training-fb-header-image" src="./images/feedback-metrics.png" alt="Feedback metrics" width = 70%>
 			<p class = "training-fb-info">
 				Overall all metrics had a high enough performance. The only class that turned out to be problematic is pi-helix (I), as it comprised less than 0.3% of the training dataset.
 			</p>
+=======
+			<img class="training-fb-header-image" src="images/training/feedback-metrics.png" alt="Feedback metrics" width = 70%>
+>>>>>>> 508703cd4f9062268f8e8a67cb2c40801bbd0bd6
 		</div>
 
 
@@ -59,8 +63,8 @@
 				and the resemblence of the generated outputs to the real sequences.
 
 
-			<iframe id="igraph"  class ='training-gan-loss' scrolling="no" style="border:none;" seamless="seamless"
-						src="./images/gan_loss.html" height="700" width="120%"></iframe>
+			<iframe id="igraph" class ='training-gan-loss' scrolling="no" style="border:none;" seamless="seamless"
+					src="images/training/gan_loss.html" height="700" width="100%"></iframe>
 			<br>
 			In particular, notice the shift of the biochemical properties of the generated sequences as compared to
 			the real ones. These properties were analyzed using metrics the model has never, using a
@@ -72,8 +76,8 @@
 				to match almost all parameters after 20 epochs.
 
 
-				<iframe id="igraph"  class ='training-gan-biochem' scrolling="no" style="border:none;" seamless="seamless"
-						src="./images/GAN_biochem.html" height="700" width="120%"></iframe>
+				<iframe id="igraph" class ='training-gan-biochem' scrolling="no" style="border:none;" seamless="seamless"
+						src="images/training/GAN_biochem2.html" height="700" width="140%" ></iframe>
 
 
 			</p>
