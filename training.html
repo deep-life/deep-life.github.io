@@ -20,7 +20,7 @@
 		</div>
 	</section>
 
-        <div class="training-gan">
+        <div class="training-intro">
 			<h1 class = 'training-intro-header' > Pre-Training</h1>
 
 			<ol>
@@ -32,7 +32,7 @@
 		</div>
 
 		<div id="training-fb">
-			<h1 class = 'training-header' > Feedback Net Training </h1>
+			<h1 class = 'training-fb-header' > Feedback Net Training </h1>
 			<p class = "training-fb-info">
 				The overall problem of Q8-prediction remains a challenge in the field.  <a style="color:lightpink"  href ="https://www.nature.com/articles/d41586-020-03348-4">
 				Recent advancement for AlphaFold
@@ -40,7 +40,7 @@
 
 				The Feedback Network was implemented as a multi-label classifier.   More  specifically,  the  last  layer  of  the  network consists of eight nodes, each with sigmoid activation and the network utilizes the binary cross-entropy loss.  Given the sequence, language-like, nature of the problem we implemented an architecture that combines combine an embedding layer and bidirectional LSTMs.
 			</p>
-			<img class="training-fb-header-image" src="./images/feedback-metrics.png" alt="Feedback metrics" width = 70%>
+			<img class="training-fb-header-image" src="images/training/feedback-metrics.png" alt="Feedback metrics" width = 70%>
 		</div>
 
 
@@ -54,8 +54,8 @@
 				and the resemblence of the generated outputs to the real sequences.
 
 
-			<iframe id="igraph"  class ='training-gan-loss' scrolling="no" style="border:none;" seamless="seamless"
-						src="./images/gan_loss.html" height="700" width="120%"></iframe>
+			<iframe id="igraph" class ='training-gan-loss' scrolling="no" style="border:none;" seamless="seamless"
+					src="images/training/gan_loss.html" height="700" width="120%"></iframe>
 			<br>
 			In particular, notice the shift of the biochemical properties of the generated sequences as compared to
 			the real ones. These properties were analyzed using metrics the model has never, using a
@@ -67,8 +67,8 @@
 				to match almost all parameters after 20 epochs.
 
 
-				<iframe id="igraph"  class ='training-gan-biochem' scrolling="no" style="border:none;" seamless="seamless"
-						src="./images/GAN_biochem.html" height="700" width="120%"></iframe>
+				<iframe id="igraph" class ='training-gan-biochem' scrolling="no" style="border:none;" seamless="seamless"
+						src="images/training/GAN_biochem.html" height="700" width="120%"></iframe>
 
 
 			</p>
