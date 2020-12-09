@@ -22,6 +22,7 @@
 
 	<section id ="exper">
 		<h1 class = 'training-intro-header' > Experiments</h1>
+		<p>Select an experiment to explore.</p>
 		<ul>
 			<!-- FIRST SECTION -->
 			<li>
@@ -31,10 +32,26 @@
 					<li>
 					<button type="button" class="collapsible">Common single features ( H / E) </button>
 					<div class="content">
-						First, we optimized the sequences for three most common features: C, H, E. Feature C is, however, already present in almost every sequence with an average score of 100% throughout the run. Thus, only features E and H are shown. Within 7 epochs, the probability of observing the feature E increased from 40% to 69%. For H, we observed an increase.
+						First, we optimized the sequences for three most common features: C, H, E.
+						Feature C is, however, already present in almost every sequence with an average score
+						of 100% throughout the run. Thus, only features E and H are shown. During each step (epoch),
+						2-5 logs were collected and the average of the score is shown.
 
-						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/H_experiment.html" height="800" width="100%"></iframe>
-						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/E_experiment.html" height="800" width="100%"></iframe>
+						<br>
+						Despite the flutuation in the average score per step, we can observe a general increasing that
+						indicates the increasing probability of the feature being present in the sequence.
+
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless"
+								src="./images/experiments/E_experiment.html" height="800" width="100%"></iframe>
+
+						The probability of the feature H being present gradually increases from 63% to 75-85% at
+						steps 6-9.
+
+
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless"
+								src="./images/experiments/H_experiment.html" height="800" width="100%"></iframe>
+
+
 					</div>
 					</li>
 
@@ -69,7 +86,10 @@
 					<div class="content">
 						To see if the network is able to learn several features at once, we have performed
 						simultaneous enrichment for three most common features. The initial score for feature C was already 100% and 
-						thus no improvement can be observed there. Strikingly, for H and E, the probability of presence increase from 62.5% and 41%, to 78.5% and 74%, respectively.
+						thus no improvement can be observed there.
+						While collecting more logs per epoch would smoothen out the fluctuation, we can observe
+						an increase of by 30-40% for the feature E and up to 20% for the feature H.
+
 						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/CHE_experiment.html" height="800" width="100%"></iframe>
 					</div>
 					</li>
@@ -77,7 +97,8 @@
 					<li>
 					<button type="button" class="collapsible">Combination of common and rare features (T,E,G) </button>
 					<div class="content">
-						Next, we optimized for a combination of rare and common features. Specifically, two rare features (T,G) were enriched simultaneously with a more common feature (E).
+						Next, we optimized for a combination of rare and common features.
+						Specifically, two rare features (T,G) were enriched simultaneously with a more common feature (E).
 						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/ETG_experiment.html" height="800" width="100%"></iframe>
 					</div>
 					</li>
@@ -96,8 +117,8 @@
 					monitor how different generated sequences are, before and after optimization. The following graph
 					is for the optimization of the feature H (before optimization and after optimization).
 
-						 <iframe id="igraph"  class ='exper' scrolling="no" style="border:none;" seamless="seamless"
-							src="./images/experiments/edit_H3.html" height="500" width="100%"></iframe>
+						 <iframe id="igraph" class ='exper' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/edit_H3.html" height="500" width="100%" style = "margin-left:20%"></iframe>
 				</div>
 			</li>
 
