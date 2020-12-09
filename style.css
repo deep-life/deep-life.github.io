@@ -27,6 +27,10 @@ h2{
 	font-size: 22px
 }
 
+.ref {
+	color:darkgray;
+}
+
 .container-home{
 background: url("images/approach/prot3.gif") black;
 background-position: 90% 55%;
@@ -306,12 +310,12 @@ font-weight: 100;
 	font-family: Didot, serif;
   display: none;
   overflow: hidden;
-	margin-left:5%
+	margin-left:3%
 }
 
 
-.exper-score{
-	margin-left:30%
+.exper{
+	float:center;
 }
 
 .exper-seq{

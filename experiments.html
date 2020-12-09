@@ -33,18 +33,8 @@
 					<div class="content">
 						First, we optimized the sequences for three most common features: C, H, E. Feature C is, however, already present in almost every sequence with an average score of 100% throughout the run. Thus, only features E and H are shown. Within 7 epochs, the probability of observing the feature E increased from 40% to 69%. For H, we observed an increase.
 
-					<div class = 'row'>
-						 <div class = 'column' style ="margin-left:-20%">
-							<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
-							src="./images/experiments/E_2.html" height="400" width="100%"></iframe>
-						 </div>
-
- 						<div class = 'column'>
-						<iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
-							src="./images/experiments/H_1.html" height="400" width="100%"></iframe>
-						</div>
-					</div>
-
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/H_experiment.html" height="800" width="100%"></iframe>
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/E_experiment.html" height="800" width="100%"></iframe>
 					</div>
 					</li>
 
@@ -60,7 +50,7 @@
 						At that point, the size of the dataset starts reaching a million sequences - which are problematic to keep in the running memory.
 						 Future optimization to our code might include getting read of the old sequences while continually adding new and better ones. 
 						 Alternatively, RAM problems can be avoided by creating a flexible threshold that gets higher once the generator outputs sequences that are more successful. 
-						<iframe id="igraph"  scrolling="no" style="border:none;" seamless="seamless" src="./images/experiments/I_experiment.html" height="525" width="90%"></iframe>
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/I_experiment.html" height="800" width="100%"></iframe>
 
 					</div>
 					</li>
@@ -75,16 +65,20 @@
 			<div class="content">
 					<ul>
 					<li>
-					<button type="button" class="collapsible">Experiment 3</button>
+					<button type="button" class="collapsible">Combination of common features (C,H,E) </button>
 					<div class="content">
-						description + graphs
+						To see if the network is able to learn several features at once, we have performed
+						simultaneous enrichment for three most common features. The initial score for feature C was already 100% and 
+						thus no improvement can be observed there. Strikingly, for H and E, the probability of presence increase from 62.5% and 41%, to 78.5% and 74%, respectively.
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/CHE_experiment.html" height="800" width="100%"></iframe>
 					</div>
 					</li>
 
 					<li>
-					<button type="button" class="collapsible">Experiment 4</button>
+					<button type="button" class="collapsible">Combination of common and rare features (T,E,G) </button>
 					<div class="content">
-						description + graphs
+						Next, we optimized for a combination of rare and common features. Specifically, two rare features (T,G) were enriched simultaneously with a more common feature (E).
+						<iframe id="igraph"  scrolling="no" class ='exper' style="border:none;" seamless="seamless" src="./images/experiments/ETG_experiment.html" height="800" width="100%"></iframe>
 					</div>
 					</li>
 				</ul>
@@ -102,8 +96,8 @@
 					monitor how different generated sequences are, before and after optimization. The following graph
 					is for the optimization of the feature H (before optimization and after optimization).
 
-						 <iframe id="igraph"  class ='exper-score' scrolling="no" style="border:none;" seamless="seamless"
-							src="./images/experiments/edit_H3.html" height="400" width="100%" style="margin-left:-10%" ></iframe>
+						 <iframe id="igraph"  class ='exper' scrolling="no" style="border:none;" seamless="seamless"
+							src="./images/experiments/edit_H3.html" height="500" width="100%"></iframe>
 				</div>
 			</li>
 
